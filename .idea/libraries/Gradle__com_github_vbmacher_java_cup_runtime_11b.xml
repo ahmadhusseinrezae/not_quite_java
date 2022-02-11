@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.vbmacher:java-cup-runtime:11b">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vbmacher/java-cup-runtime/11b/18b595e963a770cce107e629ddd5e143c8c0b52b/java-cup-runtime-11b.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vbmacher/java-cup-runtime/11b/8a98e0db8e77d9885e37d02c9f79764d915cd091/java-cup-runtime-11b-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

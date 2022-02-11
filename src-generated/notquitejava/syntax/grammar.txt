@@ -1,0 +1,94 @@
+===== Terminals =====
+[0]EOF [1]error [2]INVALID_TOKEN [3]ABSTRACT [4]CONTINUE 
+[5]FOR [6]NEW [7]SWITCH [8]ASSERT [9]DEFAULT 
+[10]IF [11]PACKAGE [12]SYNCHRONIZED [13]BOOLEAN [14]DO 
+[15]GOTO [16]PRIVATE [17]THIS [18]BREAK [19]DOUBLE 
+[20]IMPLEMENTS [21]PROTECTED [22]THROW [23]BYTE [24]ELSE 
+[25]IMPORT [26]PUBLIC [27]THROWS [28]CASE [29]ENUM 
+[30]INSTANCEOF [31]RETURN [32]TRANSIENT [33]CATCH [34]EXTENDS 
+[35]INT [36]SHORT [37]TRY [38]CHAR [39]FINAL 
+[40]INTERFACE [41]STATIC [42]VOID [43]CLASS [44]FINALLY 
+[45]LONG [46]STRICTFP [47]VOLATILE [48]CONST [49]FLOAT 
+[50]NATIVE [51]SUPER [52]WHILE [53]MAIN [54]STRING 
+[55]LENGTH [56]SYSTEM [57]OUT [58]PRINTLN [59]LBRACE 
+[60]RBRACE [61]LBRACKET [62]RBRACKET [63]LRBRACKET [64]LPAREN 
+[65]RPAREN [66]DOT [67]SEMI [68]COMMA [69]EQ 
+[70]NEG [71]AND [72]PLUS [73]MINUS [74]TIMES 
+[75]DIV [76]LESS [77]EQUALS [78]UMINUS [79]TRUE 
+[80]FALSE [81]NULL [82]NUMBER [83]ID 
+
+===== Non terminals =====
+[0]program [1]topLevelDeclList [2]topLevelDecl [3]classDecl [4]memberDeclList 
+[5]varDecl [6]functionDecl [7]paramList [8]paramListRest [9]type 
+[10]baseType [11]brackets [12]block [13]statement [14]statementList 
+[15]blockStatement [16]expr [17]expr2 [18]expr3 [19]exprL 
+[20]exprList [21]exprListRest 
+
+===== Productions =====
+[0] program ::= topLevelDeclList 
+[1] $START ::= program EOF 
+[2] topLevelDeclList ::= topLevelDecl topLevelDeclList 
+[3] topLevelDeclList ::= 
+[4] topLevelDecl ::= classDecl 
+[5] topLevelDecl ::= functionDecl 
+[6] classDecl ::= CLASS ID LBRACE memberDeclList RBRACE 
+[7] classDecl ::= CLASS ID EXTENDS ID LBRACE memberDeclList RBRACE 
+[8] memberDeclList ::= varDecl SEMI memberDeclList 
+[9] memberDeclList ::= functionDecl memberDeclList 
+[10] memberDeclList ::= 
+[11] varDecl ::= type ID 
+[12] functionDecl ::= type ID LPAREN paramList RPAREN block 
+[13] paramList ::= varDecl paramListRest 
+[14] paramList ::= 
+[15] paramListRest ::= COMMA varDecl paramListRest 
+[16] paramListRest ::= 
+[17] exprList ::= expr exprListRest 
+[18] exprList ::= 
+[19] exprListRest ::= COMMA expr exprListRest 
+[20] exprListRest ::= 
+[21] baseType ::= BOOLEAN 
+[22] baseType ::= INT 
+[23] type ::= baseType brackets 
+[24] type ::= exprL brackets 
+[25] brackets ::= LRBRACKET brackets 
+[26] brackets ::= 
+[27] block ::= LBRACE statementList RBRACE 
+[28] statementList ::= blockStatement statementList 
+[29] statementList ::= 
+[30] blockStatement ::= statement 
+[31] blockStatement ::= varDecl SEMI 
+[32] statement ::= block 
+[33] statement ::= IF LPAREN expr RPAREN statement ELSE statement 
+[34] statement ::= WHILE LPAREN expr RPAREN statement 
+[35] statement ::= RETURN expr SEMI 
+[36] statement ::= expr SEMI 
+[37] statement ::= exprL EQ expr SEMI 
+[38] statement ::= error SEMI 
+[39] expr ::= expr AND expr 
+[40] expr ::= expr PLUS expr 
+[41] expr ::= expr MINUS expr 
+[42] expr ::= expr TIMES expr 
+[43] expr ::= expr DIV expr 
+[44] expr ::= expr EQUALS expr 
+[45] expr ::= expr LESS expr 
+[46] expr ::= NEG expr 
+[47] expr ::= MINUS expr 
+[48] expr ::= ID LPAREN exprList RPAREN 
+[49] expr ::= expr2 
+[50] expr2 ::= NEW baseType LBRACKET expr RBRACKET brackets 
+[51] expr2 ::= NEW ID LBRACKET expr RBRACKET brackets 
+[52] expr2 ::= expr3 
+[53] expr3 ::= expr2 DOT LENGTH 
+[54] expr3 ::= expr2 DOT ID LPAREN exprList RPAREN 
+[55] expr3 ::= NEW ID LPAREN RPAREN 
+[56] expr3 ::= TRUE 
+[57] expr3 ::= FALSE 
+[58] expr3 ::= NUMBER 
+[59] expr3 ::= THIS 
+[60] expr3 ::= NULL 
+[61] expr3 ::= LPAREN expr RPAREN 
+[62] expr3 ::= exprL 
+[63] exprL ::= expr3 LBRACKET expr RBRACKET 
+[64] exprL ::= ID 
+[65] exprL ::= expr2 DOT ID 
+

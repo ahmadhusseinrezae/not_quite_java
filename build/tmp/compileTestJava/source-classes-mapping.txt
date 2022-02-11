@@ -1,0 +1,6 @@
+notquitejava/translation/FileTranslationTest.java
+ notquitejava.translation.FileTranslationTest
+notquitejava/translation/TranslationTestHelper.java
+ notquitejava.translation.TranslationTestHelper
+ notquitejava.translation.TranslationTestHelper$1
+ notquitejava.translation.TranslationTestHelper$ProgramExecutionException

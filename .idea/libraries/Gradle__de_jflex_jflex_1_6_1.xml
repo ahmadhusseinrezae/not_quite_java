@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: de.jflex:jflex:1.6.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.jflex/jflex/1.6.1/eb4d51e1a8ea7ee96068905ddeceb9b28737c7eb/jflex-1.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.jflex/jflex/1.6.1/2fe0e9fa723b00cdbb3b7bdf7ab1ce394c21eb81/jflex-1.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
