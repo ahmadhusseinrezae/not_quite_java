@@ -27,8 +27,10 @@ We have two levels of shadowing,
 
 7- Obscuring
 A class may have a field with the same name as a class or a class function.
+
 8- Cycle conflict
 It may happen if a class extends itself or another class that extends the first class.
+
 9-Name lookup
 When a variable being used, we look if the variable is registered in the current scope.
 
