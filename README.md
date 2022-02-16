@@ -2,6 +2,7 @@
 It is a simple compiler for a subset of language java called not_quite_java. Its code will be runnable by JVM.
 
 
+## Analysis
 Under the Analysis phase, we tried to cover several topics such as:
 
 1- Name Analysis
@@ -30,6 +31,8 @@ A class may have a field with the same name as a class or a class function.
 It may happen if a class extends itself or another class that extends the first class.
 9-Name lookup
 When a variable being used, we look if the variable is registered in the current scope.
+
+## Type checking
 
 For type checking phase we considered following topics: 
 
