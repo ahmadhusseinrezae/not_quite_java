@@ -3,21 +3,27 @@ It is a simple compiler for a subset of language java called not_quite_java. Its
 
 
 ## Analysis
+
 Under the Analysis phase, we tried to cover several topics such as:
 
 - Name Analysis
+
 We need to have records of available and visible variables, classes, and functions for name analysis.
 
 - Field visibility
+
 At any point in the program, a field will be visible if its name is inside the scope’s registered field names.
 
 - Field name uniqueness
+
 When putting a new variable in each scope, we check if the field name is unique
 
 - Overloading
+
 A class can have multiple function declarations with the same name and different parameter lists and types.
 
 - Overriding
+
 A class that extends some other class can have a function with the same signature as functions in the superclass.
 
 - Shadowing
