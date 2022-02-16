@@ -5,33 +5,33 @@ It is a simple compiler for a subset of language java called not_quite_java. Its
 ## Analysis
 Under the Analysis phase, we tried to cover several topics such as:
 
-1- Name Analysis
+- Name Analysis
 We need to have records of available and visible variables, classes, and functions for name analysis.
 
-2- Field visibility
+- Field visibility
 At any point in the program, a field will be visible if its name is inside the scope’s registered field names.
 
-3- Field name uniqueness
+- Field name uniqueness
 When putting a new variable in each scope, we check if the field name is unique
 
-4- Overloading
+- Overloading
 A class can have multiple function declarations with the same name and different parameter lists and types.
 
-5- Overriding
+- Overriding
 A class that extends some other class can have a function with the same signature as functions in the superclass.
 
-6- Shadowing
+- Shadowing
 We have two levels of shadowing,
 • A class has a field with the same name as its parent class’s field. It is called Hiding.
 • A block has a field with the same name as its parent class’s field. It is called Shadowing.
 
-7- Obscuring
+- Obscuring
 A class may have a field with the same name as a class or a class function.
 
-8- Cycle conflict
+- Cycle conflict
 It may happen if a class extends itself or another class that extends the first class.
 
-9-Name lookup
+-Name lookup
 When a variable being used, we look if the variable is registered in the current scope.
 
 ## Type checking
